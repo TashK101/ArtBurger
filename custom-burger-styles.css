@@ -1,0 +1,66 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.layered-image {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image-overlay {
+    display: none;
+}
+
+.my-canvas {
+    display: none;
+}
+
+.image-base {
+    width: 80%;
+    height: 80%;
+}
+
+.burger-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+    height: 70%;
+    width: auto;
+    filter: sepia(100) brightness(120%);
+    opacity: 70%;
+    /*странные вещи с размерами обрезания, на квадратах ок, надо разбираться*/
+    clip-path: circle(50% at 50% 50%);
+
+}
+
+
+
+.button-style {
+    background-color: #d2b48c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
