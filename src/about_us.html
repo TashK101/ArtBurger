@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>ART BURGER</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .left {
+            flex: 1;
+            background-image: url("images/about_us.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+        }
+
+        #block_concept {
+            margin: 0 auto;
+            max-width: 80%;
+        }
+
+        #header {
+            font-size: 70px;
+            font-weight: bold;
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        #desc {
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        .right button {
+            font-size: 28px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 3px solid black;
+            background-color: transparent;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="topnav">
+    <img id="openNav" src="images/ic_open_nav.svg" alt="open nav">
+</div>
+
+<div id="mySidenav" class="sidenav">
+    <img id="closeNav" src="images/ic_close_nav.svg" alt="close nav">
+    <a href="home.html">НА ГЛАВНУЮ</a>
+    <a href="menu.html">МЕНЮ</a>
+    <a href="about_us.html">О НАС</a>
+    <a href="events.html">МЕРОПРИЯТИЯ</a>
+    <a href="booking.html">ЗАБРОНИРОВАТЬ</a>
+    <a href="contacts.html">КОНТАКТЫ</a>
+</div>
+<script src="script.js"></script>
+
+<div class="container">
+    <div class="left"></div>
+    <div class="right">
+        <div id="block_concept">
+            <p id="header">КОНЦЕПЦИЯ</p>
+            <div id="desc">
+                <p>Кто сказал, что бургеры и высокое искусство несовместимы?</p>
+                <p>В нашем ресторане вы сможете прикоснуться к шедеврам классической живописи,
+                    импрессионизма и поп-арта, не выходя из-за столика. <br>
+                    Или создать свой уникальный бургер с любым рисунком,
+                    какой только пожелает ваша душа. </p>
+            </div>
+            <button>узнать у нас больше</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
