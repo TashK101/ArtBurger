@@ -14,11 +14,11 @@ window.addEventListener('load', function() {
 
             img.classList.add('burger-img');
             canvas.classList.add('burger-img');
+            const relevantSize = Math.min(img.height, img.width)
 
-
+            img.style.clipPath = `circle(${relevantSize/2}px at 50% 50%)`
             // const fisheye = new Fisheye(canvas);
-            //
-            // fisheye.setViewport(500, 500);
+            // fisheye.setViewport(parseInt(canvas.height), parseInt(canvas.height));
             // fisheye.setDistortion(10, 10, 10);
             // fisheye.clear();
             //
