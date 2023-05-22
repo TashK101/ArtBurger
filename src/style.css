@@ -6,6 +6,7 @@ body {
     line-height: 25px;
     margin: 0;
     padding: 0;
+    background-color: #E1E1E1;
 }
 
 .sidenav {
@@ -19,6 +20,7 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    padding-bottom: 30px;
 }
 
 .sidenav a {
@@ -38,9 +40,10 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 102px;
 }
 
-.topnav button {
+.topnav #bookBtn {
     font-size: 28px;
     font-weight: bold;
     padding: 10px 20px;
@@ -51,7 +54,11 @@ body {
     margin: 18px 50px 18px 0;
 }
 
-#openNav{
+.topnav #logo {
+    margin: auto;
+}
+
+#openNav {
     margin: 18px 0 18px 50px;
 }
 
