@@ -5,87 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style.css"/>
+    <link rel="stylesheet" href="contacts_style.css"/>
     <title>ART BURGER</title>
-    <style>
-        .container {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            margin-top: 102px;
-        }
-
-        .left {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: left;
-        }
-
-        .right {
-            flex: 1;
-        }
-
-        #block_concept {
-            margin: 0 auto;
-            max-width: 80%;
-        }
-
-        .header {
-            font-size: 70px;
-            font-weight: bold;
-            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        }
-
-        .desc {
-            font-size: 30px;
-        }
-
-        .subheader {
-            font-size: 32px;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
 <div class="topnav">
     <img id="openNav" src="../../images/ic_open_nav.svg" alt="open nav">
-    <button id ="bookBtn">забронировать</button>
+    <button id="button_booking" onclick="openBookingPage()">забронировать</button>
 </div>
-
-<div id="mySidenav" class="sidenav">
+<div class="sidenav">
     <img id="closeNav" src="../../images/ic_close_nav.svg" alt="close nav">
-    <a href="../home.html">НА ГЛАВНУЮ</a>
-    <a href="../menu.html">МЕНЮ</a>
-    <a href="../about_us/about_us.html">О НАС</a>
-    <a href="../events.html">МЕРОПРИЯТИЯ</a>
-    <a href="../booking.html">ЗАБРОНИРОВАТЬ</a>
+    <a href="../home/home.html">НА ГЛАВНУЮ</a>
+    <a href="../menu/menu.html">МЕНЮ</a>
+    <a href="">О НАС</a>
+    <a href="../events/events.html">МЕРОПРИЯТИЯ</a>
+    <a href="../booking/booking.html">ЗАБРОНИРОВАТЬ</a>
     <a href="contacts.html">КОНТАКТЫ</a>
 </div>
 <script src="../../script.js"></script>
 
-<div class="container">
-    <div class="left">
-        <div id="block_concept">
-            <p class="header">АДРЕС</p>
-            <div class="desc"><p>Г. Екатерибург, ул. Каримова, д. 25/2</p></div>
-            <p class="header">КОНТАКТЫ</p>
-            <div class="desc">
-                <p class="subheader">Срочные вопросы</p>
-                <p>Кузеванов Александр</p>
-                <p>express@artburger.com</p>
-                <p class="subheader">Возможности карьерного роста</p>
-                <p>Валитова Алина</p>
-                <p>careers@artburger.com</p>
-                <p class="subheader">Коммуникация и маркетинг</p>
-                <p>Лисаченко Мария</p>
-                <p>marketing@artburger.com</p>
+<div class="contacts_page">
+
+    <!-- PAGE 1 -->
+    <div class="main_container_with_margin">
+        <div class="container_with_content">
+            <div class="sub_container_with_content">
+                <p class="header_text_with_margin">СВЯЗЬ С НАМИ</p>
+                <div class="description_text_with_margin">
+                    <p>Чтобы связаться с командой ArtBurger, просто заполните контактную форму ниже.</p>
+                    <p>Также вы можете позвонить нам по телефону +788888888888 или отправить электронное
+                        письмо по адресу reservations@artburger.com</p>
+                </div>
+
+                <form name="text" method="post" action="">
+                    <div class="container_input">
+                        <p class="text_input">Имя<br>
+                            <label><input class="input" type="text"></label>
+                        </p>
+                        <p class="text_input">Фамилия<br>
+                            <label><input class="input" type="text"></label>
+                        </p>
+                    </div>
+                    <div class="container_input">
+                        <p class="text_input">Почта<br>
+                            <label><input class="input" type="text"></label>
+                        </p>
+                        <p class="text_input">Телефон<br>
+                            <label><input class="input" type="text"></label>
+                        </p>
+                    </div>
+                    <p class="text_input">Сообщение<Br>
+                        <label><textarea class="text_area" name="comment"></textarea></label>
+                    </p>
+                    <p><input id="button_submit" type="submit" value="отправить"></p>
+                </form>
+            </div>
+        </div>
+        <div class="container_with_image">
+            <img src="../../images/contacts_restaurant_1.png" alt="contacts image">
+        </div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="main_container">
+        <div class="container_with_image">
+            <img src="../../images/contacts_restaurant_2.png" alt="contacts image">
+        </div>
+        <div class="container_with_content">
+            <div id="sub_container_with_content">
+                <p class="header_text_with_margin">ЧАСЫ РАБОТЫ</p>
+                <div class="description_text_with_margin">
+                    <p>ОБЕД<br>Суббота и воскресенье<br>Бронь с 12:00 до 01:30<br></p>
+                    <p>УЖИН<br>Со вторника по субботу<br>Бронь с 18:00 до 21:00<br></p>
+                </div>
+                <p class="header_text_with_margin">ПОДПИШИСЬ</p>
+                <div class="container_logo" onclick="window.open('https://google.com','_blank')">
+                    <p>INSTAGRAM</p>
+                    <img src="../../images/contacts_instagram_logo.svg" width="28" height="28" alt="instagram logo">
+                </div>
+                <div class="container_logo" onclick="window.open('https://google.com','_blank')">
+                    <p>FACEBOOK</p>
+                    <img src="../../images/contacts_facebook_logo.svg" width="28" height="28" alt="facebook logo">
+                </div>
             </div>
         </div>
     </div>
-    <div class="right">
-        <img src="../../images/contacts.png" alt="contacts image">
+
+    <!-- PAGE 3 -->
+    <div class="main_container">
+        <div class="container_with_content">
+            <div class="sub_container_with_content">
+                <p class="header_text">АДРЕС</p>
+                <div class="description_text"><p>Г. Екатерибург, ул. Каримова, д. 25/2</p></div>
+                <p class="header_text">КОНТАКТЫ</p>
+                <div class="description_text">
+                    <p class="subheader_text">Срочные вопросы</p>
+                    <p>Кузеванов Александр</p>
+                    <p>express@artburger.com</p>
+                    <p class="subheader_text">Возможности карьерного роста</p>
+                    <p>Валитова Алина</p>
+                    <p>careers@artburger.com</p>
+                    <p class="subheader_text">Коммуникация и маркетинг</p>
+                    <p>Лисаченко Мария</p>
+                    <p>marketing@artburger.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="container_with_image">
+            <img src="../../images/contacts_restaurant_3.png" alt="contacts image">
+        </div>
     </div>
+
 </div>
 </body>
 </html>

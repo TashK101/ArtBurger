@@ -1,0 +1,15 @@
+.events_page .container_logo {
+    display: flex;
+    align-items: center;
+}
+
+.events_page .container_logo p {
+    font-size: 20px;
+    line-height: 25px;
+    margin-right: 21px;
+}
+
+.events_page .container_logo img {
+    height: 15px;
+    margin-right: 21px;
+}
