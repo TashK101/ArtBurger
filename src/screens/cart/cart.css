@@ -1,0 +1,41 @@
+.cart_element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart_content_wrapper {
+    margin: 40px 69px 40px;
+}
+
+#cart_list {
+    list-style: none;
+}
+
+.cart_text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+#cart_header {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+#cart_summary {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 34px;
+}
+
+#cart_no_items {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

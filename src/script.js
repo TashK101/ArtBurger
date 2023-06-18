@@ -14,12 +14,8 @@ reservationOpen.addEventListener("click", () => reservation.style.width = "60%")
 reservationLink.addEventListener("click", () => reservation.style.width = "60%");
 reservationClose.addEventListener("click", () => reservation.style.width = "0");
 
-/* function openMenuPage() {
-    window.open("../menu/menu.html");
-}
-
-function openBookingPage() {
-    window.open("../booking/booking.html");
-} */
-
 setTimeout(() => preloaderScene.style.display = 'none', 5000);
+
+function openOrderFinalPage() {
+    window.open("../order/final/order_final.html");
+}

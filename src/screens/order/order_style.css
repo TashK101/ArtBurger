@@ -1,0 +1,45 @@
+.order_page .order_main_container {
+    width: 1141px;
+    margin-top: 152px;
+}
+
+.order_page .order_container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 58px;
+}
+
+.order_page .order_container_with_border {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 58px;
+    border: 1px solid black;
+    padding: 30px;
+}
+
+.order_page .text {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.order_page .input {
+    width: 295px;
+    height: 48px;
+    border-radius: 5px;
+    border: 1px solid #00000061;
+    font-size: 28px;
+}
+
+.order_page .input_date {
+    width: 295px;
+    height: 78px;
+    border-radius: 5px;
+    border: 1px solid #00000061;
+    font-size: 28px;
+}
+
+.order_page .long_text_container {
+    width: 564px;
+    height: 78px;
+}

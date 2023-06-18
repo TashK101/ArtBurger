@@ -116,12 +116,12 @@ body {
     display: flex;
 }
 
-.reservation_content_wrapper>div {
+.reservation_content_wrapper > div {
     width: 50%;
     margin: 0 30px 0 30px;
 }
 
-.reservation_content_wrapper>div>h1 {
+.reservation_content_wrapper > div > h1 {
     text-align: center;
     margin: 0 0 40px 0;
 }
@@ -152,6 +152,22 @@ body {
 }
 
 .main_button:hover {
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.main_button_black {
+    cursor: pointer;
+    font-size: 34px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+}
+
+.main_button_black:hover {
     font-weight: 400;
     background-color: rgba(0, 0, 0, 0.3);
 }
@@ -233,7 +249,7 @@ body {
     position: relative;
 }
 
-.background_container>.header_logo {
+.background_container > .header_logo {
     width: 400px;
 }
 
