@@ -1,10 +1,11 @@
 function updateUI() {
     const tableNumberLabel = document.getElementById('table_number_label')
     const tableNumberInput = document.createElement("input")
+    const maxTableNumber = getMaxTableNumber()
     tableNumberInput.setAttribute("class", "input")
     tableNumberInput.setAttribute("type", "number")
-    tableNumberInput.setAttribute("placeholder", "Номер столика")
-    tableNumberInput.setAttribute("max", `${getMaxTableNumber()}`)
+    tableNumberInput.setAttribute("placeholder", `Всего ${maxTableNumber} столиков`)
+    tableNumberInput.setAttribute("max", `${maxTableNumber}`)
     tableNumberLabel.append(tableNumberInput)
 
     const bookingDateLabel = document.getElementById('booking_date_label')
@@ -14,6 +15,14 @@ function updateUI() {
     bookingDateInput.setAttribute("value", getCurrentDate())
     bookingDateInput.setAttribute("min", getCurrentDate())
     bookingDateLabel.append(bookingDateInput)
+
+    const confirmOrderButton = document.getElementById('confirm_order_btn')
+    confirmOrderButton.addEventListener("click", function () {
+        if (tableNumberInput.value !== "" && bookingDateInput.value !== "") {
+            window.open("../order/final/order_final.html");
+            localStorage.clear()
+        }
+    })
 }
 
 function getCurrentDate() {

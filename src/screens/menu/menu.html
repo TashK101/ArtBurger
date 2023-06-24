@@ -29,9 +29,9 @@
         <a href="#" id="reservation_link">ЗАБРОНИРОВАТЬ</a>
         <a href="../contacts/contacts.html">КОНТАКТЫ</a>
     </div>
-    <div class="reservation">
-        <div class="reservation_close_wrapper">
-            <img class="reservation_closeNav" src="../../images/ic_close_nav.svg" alt="close nav">
+    <div class="cart_container_div">
+        <div class="cart_close_wrapper">
+            <img class="cart_closeNav" src="../../images/ic_close_nav.svg" alt="close nav">
         </div>
         <div id="cart_content_wrapper"></div>
     </div>
@@ -39,10 +39,71 @@
 </header>
 <!-- header end -->
 
-<div id="menu_main_container">
-    <p id="menu_label">МЕНЮ</p>
-    <ul id="menu_list"></ul>
+<div class="tabs_container">
+    <ul class="tabs">
+        <li data-tab-target="#section_burger" class="active tab">Бургеры</li>
+        <li data-tab-target="#section_snacks" class="tab">Закуски</li>
+        <li data-tab-target="#section_salads" class="tab">Салаты</li>
+        <li data-tab-target="#section_deserts" class="tab">Десерты</li>
+        <li data-tab-target="#section_drinks" class="tab">Напитки</li>
+    </ul>
+    <div class="tab_button">
+        <button class="main_button_white" id="open_cart_btn">Корзина</button>
+    </div>
 </div>
+
+<div class="tab-content">
+    <div id="section_burger" data-tab-content class="active">
+        <div class="menu_header_container">
+            <div class="menu_header_div"><p>БУРГЕРЫ</p></div>
+        </div>
+        <div class="menu_main_container">
+            <ul id="menu_section_burger"></ul>
+        </div>
+    </div>
+    <div id="section_snacks" data-tab-content>
+        <div class="menu_header_container">
+            <div class="menu_header_div"><p>ЗАКУСКИ</p></div>
+        </div>
+        <div class="menu_main_container">
+            <ul id="menu_section_snacks"></ul>
+        </div>
+    </div>
+    <div id="section_salads" data-tab-content>
+        <div class="menu_header_container">
+            <div class="menu_header_div"><p>САЛАТЫ</p></div>
+        </div>
+        <div class="menu_main_container">
+            <ul id="menu_section_salad"></ul>
+        </div>
+    </div>
+    <div id="section_deserts" data-tab-content>
+        <div class="menu_header_container">
+            <div class="menu_header_div"><p>ДЕСЕРТЫ</p></div>
+        </div>
+        <div class="menu_main_container">
+            <ul id="menu_section_deserts"></ul>
+        </div>
+    </div>
+    <div id="section_drinks" data-tab-content>
+        <div class="menu_header_container">
+            <div class="menu_header_div"><p>НАПИТКИ</p></div>
+        </div>
+        <div class="menu_subheader_container">
+            <div class="menu_subheader_div"><p>БЕЗАЛКОГОЛЬНЫЕ</p></div>
+        </div>
+        <div class="menu_main_container">
+            <ul id="menu_section_drinks_non_alcoholic"></ul>
+        </div>
+        <div class="menu_subheader_container">
+            <div class="menu_subheader_div"><p>АЛКОГОЛЬНЫЕ</p></div>
+        </div>
+        <div class="menu_main_container">
+            <ul id="menu_section_drinks_alcoholic"></ul>
+        </div>
+    </div>
+</div>
+
 <script src="menu.js"></script>
 <script type="module" src="../cart/cart.js"></script>
 </body>

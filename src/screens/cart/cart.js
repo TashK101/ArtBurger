@@ -91,6 +91,7 @@ function updateUI() {
         div.setAttribute("data-id", `${value.id}`)
 
         const decrement = document.createElement("img")
+        decrement.setAttribute("class", "cart_img")
         decrement.setAttribute("src", "../../images/cart_decrement_item.svg")
         decrement.setAttribute("width", "30")
         decrement.setAttribute("height", "30")
@@ -111,6 +112,7 @@ function updateUI() {
         div.append(quantity)
 
         const increment = document.createElement("img")
+        increment.setAttribute("class", "cart_img")
         increment.setAttribute("src", "../../images/cart_increment_item.svg")
         increment.setAttribute("width", "30")
         increment.setAttribute("height", "30")
@@ -125,6 +127,7 @@ function updateUI() {
         div.append(price)
 
         const clear = document.createElement("img")
+        clear.setAttribute("class", "cart_img_clear")
         clear.setAttribute("src", "../../images/cart_clear_item.svg")
         clear.setAttribute("width", "40")
         clear.setAttribute("height", "52")
@@ -171,3 +174,9 @@ function updateUI() {
 document.addEventListener('DOMContentLoaded', () => {
     updateUI()
 })
+
+const cartContainer = document.querySelector(".cart_container_div");
+const cartOpen = document.querySelector("#open_cart_btn");
+const cartClose = document.querySelector(".cart_closeNav");
+cartOpen.addEventListener("click", () => cartContainer.style.width = "60%");
+cartClose.addEventListener("click", () => cartContainer.style.width = "0");

@@ -15,7 +15,3 @@ reservationLink.addEventListener("click", () => reservation.style.width = "60%")
 reservationClose.addEventListener("click", () => reservation.style.width = "0");
 
 setTimeout(() => preloaderScene.style.display = 'none', 5000);
-
-function openOrderFinalPage() {
-    window.open("../order/final/order_final.html");
-}
