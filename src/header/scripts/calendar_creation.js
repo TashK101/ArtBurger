@@ -126,7 +126,7 @@ function CalendarControl() {
             document.querySelector(".calendar .calendar-body").innerHTML = "";
             calendarControl.plotDayNames();
             calendarControl.displayMonth();
-            calendarControl.displayYear();
+            calendarControl.displayYear();  
             let count = 0;
             let prevDateCount = 0;
 

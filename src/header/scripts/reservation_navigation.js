@@ -22,6 +22,11 @@ function nextPrev(n) {
     if (n == 1 && !validateForm()) return false;
     tab[currentTab].style.display = "none";
     currentTab = currentTab + n;
+
+    if (currentTab === 3) {
+        showGuestValidationData();
+    }
+
     if (currentTab >= tab.length) {
         // TODO FORM SUBMISSION         document.getElementById("regForm").submit();
         return false;
@@ -34,7 +39,7 @@ function validateForm() {
         let dateChooser = document.querySelector(`input[name="radioDateNumber"]:checked`);
         let hourChooser = document.querySelector(`select[name="hour_chooser"]`);
         let minuteChooser = document.querySelector(`select[name="minute_chooser"]`);
-       return !(dateChooser == null || hourChooser.value === "" || minuteChooser.value === "");
+       return !(dateChooser === null || hourChooser.value === "" || minuteChooser.value === "");
     }
     else if (currentTab === 1) {
         let inputFieldsReq = document.querySelectorAll(`.reservation_contacts_input_fields input`);
@@ -43,8 +48,12 @@ function validateForm() {
         }
         return true;
     }
-
-    return true;
+    else if (currentTab === 2) {
+        let tableChooser = document.querySelector(`input[name="radioSeatingChooser"]:checked`);
+        let peopleCountChooser = document.querySelector(`input[name="people_count"]`);
+        return !(tableChooser === null || peopleCountChooser.value === "");
+    }
+    return false;
 }
 
 function changeNavigationSteps(n) {

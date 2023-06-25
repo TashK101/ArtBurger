@@ -1,34 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style.css"/>
-    <link rel="stylesheet" href="menu.css"/>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../header/styles/calendar_style.css" />
+    <link rel="stylesheet" href="../../header/styles/reservation_style.css" />
+    <link rel="stylesheet" href="menu.css" />
     <title>ART BURGER</title>
 </head>
-<body>
-<div class="topnav">
-    <img id="openNav" src="../../images/ic_open_nav.svg" alt="open nav">
-    <button id="button_booking" onclick="openBookingPage()">забронировать</button>
-</div>
-<div class="sidenav">
-    <img id="closeNav" src="../../images/ic_close_nav.svg" alt="close nav">
-    <a href="../home/home.html">НА ГЛАВНУЮ</a>
-    <a href="menu.html">МЕНЮ</a>
-    <a href="">О НАС</a>
-    <a href="../events/events.html">МЕРОПРИЯТИЯ</a>
-    <a href="../booking/booking.html">ЗАБРОНИРОВАТЬ</a>
-    <a href="../contacts/contacts.html">КОНТАКТЫ</a>
-</div>
-<script src="../../script.js"></script>
 
-<div id="menu_main_container">
-    <p id="menu_label">МЕНЮ</p>
-    <ul id="menu_list"></ul>
-</div>
-<script src="menu.js"></script>
+<body>
+    <!-- header start -->
+    <header class="main_header">
+        <div class="topnav">
+            <img id="openNav" src="../../images/ic_open_nav.svg" alt="Three horizontal lines to open navigation menu">
+            <a href="../home/home.html" class="header_logo">
+                <img src="../../images/restaraunt_logo.svg" alt="logo looks like glued capital letters A and B">
+            </a>
+            <a id="button_booking" href="#">забронировать</a>
+        </div>
+        <div class="sidenav">
+            <img id="closeNav" src="../../images/ic_close_nav.svg" alt="Cross ti close navigation menu">
+            <a href="../home/home.html">НА ГЛАВНУЮ</a>
+            <a href="../menu/menu.html">МЕНЮ</a>
+            <a href="">О НАС</a>
+            <a href="../events/events.html">МЕРОПРИЯТИЯ</a>
+            <a href="#" id="reservation_link">ЗАБРОНИРОВАТЬ</a>
+            <a href="../contacts/contacts.html">КОНТАКТЫ</a>
+        </div>
+        <div class="reservation">
+            <div class="reservation_close_wrapper">
+                <img class="reservation_closeNav" src="../../images/ic_close_nav.svg"
+                    alt="Cross ti close navigation menu">
+            </div>
+            <div class="reservation_content_wrapper">
+                <div class="text_information_container">
+                    <h1>Бронирование</h1>
+                    <p>
+                        Мы с нетерпением ждем возможности приветствовать вас в ArtBurger. Чтобы точно попасть к нам,
+                        рекомендуем бронировать заранее. Обращаем ваше внимание, что столики в ArtBurger бронируются не
+                        ранее чем
+                        на следующий день от сегодняшней даты. И не позднее двух часов до закрытия ресторана<br>
+                        <br>
+                        Также заметьте, что вам поступит звонок от оператора ресторана после того, как
+                        ваше бронирование будет оформлено. Если вам не позвонили для подтверждения,
+                        возможно, в вашем бронировании произошла ошибка. Пожалуйста, свяжитесь с нашей горячей линией
+                        по телефону +788888888888 самостоятельно.<br>
+                        <br>
+                        Если вы плохо себя чувствуете, пожалуйста, оставайтесь дома и позвоните на нашу горячую линию,
+                        чтобы перенести бронирование. ArtBurger придерживается всех мер и предписаний
+                        для обеспечения здоровья и безопасности наших дорогих гостей и нашего персонала.
+                    </p>
+                </div>
+                <div class="form_container">
+                    <form>
+                        <div class="navigation_wrapper">
+                            <div class="navigation_content">
+                                <div class="navigation_content_box">
+                                    <div class="navigation_content_box_circle">
+                                        <p>1</p>
+                                    </div>
+                                    <p class="navigation_content_box_text">Дата и время</p>
+                                </div>
+                                <div class="navigation_content_line_wrapper">
+                                    <img src="../../images/reservation_navigation_line.svg" alt="cosmetic line"
+                                        class="line_img">
+                                </div>
+
+                                <div class="navigation_content_box">
+                                    <div class="navigation_content_box_circle">
+                                        <p>2</p>
+                                    </div>
+                                    <p class="navigation_content_box_text">Данные</p>
+                                </div>
+                                <div class="navigation_content_line_wrapper">
+                                    <img src="../../images/reservation_navigation_line.svg" alt="cosmetic line"
+                                        class="line_img">
+                                </div>
+
+                                <div class="navigation_content_box">
+                                    <div class="navigation_content_box_circle">
+                                        <p>3</p>
+                                    </div>
+                                    <p class="navigation_content_box_text">Посадка</p>
+                                </div>
+                                <div class="navigation_content_line_wrapper">
+                                    <img src="../../images/reservation_navigation_line.svg" alt="cosmetic line"
+                                        class="line_img">
+                                </div>
+
+                                <div class="navigation_content_box">
+                                    <div class="navigation_content_box_circle">
+                                        <p>4</p>
+                                    </div>
+                                    <p class="navigation_content_box_text">Подтверждение</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reservation_tab">
+                            <div class="calendar"></div>
+                            <div class="time_chooser_wrapper">
+                                <p class="text_block">Какое время?</p>
+                                <div class="time_chooser">
+                                    <div class="time_chooser__hour">
+                                        <select name="hour_chooser" id="time_chooser__hour_select" required>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                    <p class="colon">:</p>
+                                    <div class="time_chooser__minute">
+                                        <select name="minute_chooser" id="time_chooser__minute_select" required>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <script src="../../header/scripts/calendar_creation.js"></script>
+                        </div>
+
+                        <div class="reservation_tab">
+                            <div class="reservation_contacts_input_fields">
+                                <div class="reservation_contacts_input_wrapper">
+                                    <label for="reservation_surname">Фамилия*</label>
+                                    <input type="text" name="surname" id="reservation_surname">
+
+                                </div>
+                                <div class="reservation_contacts_input_wrapper">
+                                    <label for="reservation_name">Имя*</label>
+                                    <input type="text" name="name" id="reservation_name">
+
+                                </div>
+                                <div class="reservation_contacts_input_wrapper">
+                                    <label for="reservation_phone">Телефон*</label>
+                                    <input type="tel" name="phone" id="reservation_phone">
+
+                                </div>
+                                <div class="reservation_contacts_input_wrapper">
+                                    <label for="reservation_email">Почта*</label>
+                                    <input type="email" name="email" id="reservation_email">
+
+                                </div>
+                            </div>
+                            <div class="reservation_contacts_comment">
+                                <label for="reservation_comment">Комментарий</label>
+                                <input type="text" name="comment" id="reservation_comment">
+                            </div>
+                        </div>
+
+                        <div class="reservation_tab">
+                            <div class="reservation_seating">
+                                <div class="people_number_chooser">
+                                    <p>Сколько человек?</p>
+                                    <input type="number" name="people_count">
+                                </div>
+                                <p>Выберите столик</p>
+                                <div class="reservation_seating_chooser">
+                                    <div>
+                                        <div class="seating_chooser_part part1">
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="seating_chooser_part part2">
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                        </div>
+                                        <div class="seating_chooser_part part3">
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reservation_seating_showcase">
+                                    <div class="reservation_seating_showcase_part">
+                                        <div class="showcase_free_circle"></div>
+                                        <p>- свободно</p>
+                                    </div>
+                                    <div class="reservation_seating_showcase_part">
+                                        <div class="showcase_occupied_circle"></div>
+                                        <p>- занято</p>
+                                    </div>
+                                </div>
+                                <script src="../../header/scripts/reservation_seating.js"></script>
+                            </div>
+
+                        </div>
+                        <div class="reservation_tab">
+                            <div class="reservation_validation">
+                                <p class="reservation_validation_header">Проверьте свои данные</p>
+                                <div class="reservation_validation_row">
+                                    <p>Фамилия</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Имя</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Телефон</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Почта</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Дата</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Число гостей</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Время</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Столик</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="next_prev_buttons_wrapper">
+                            <button type="button" id="prevBtn">Назад</button>
+                            <button type="button" id="nextBtn">Дальше</button>
+                        </div>
+                        <script src="../../header/scripts/reservation_validation.js"></script>
+                        <script src="../../header/scripts/reservation_navigation.js"></script>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="../../script.js"></script>
+    </header>
+    <!-- header end -->
+
+    <div id="menu_main_container">
+        <p id="menu_label">МЕНЮ</p>
+        <ul id="menu_list"></ul>
+    </div>
+    <script src="menu.js"></script>
 
 </body>
+
 </html>

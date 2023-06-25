@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style.css" />
-    <link rel="stylesheet" href="styles/preloader_animations.css" />
-    <link rel="stylesheet" href="styles/reservation_style.css" />
-    <link rel="stylesheet" href="styles/calendar_style.css" />
-    <link rel="import" href="preloader.html">
+    <link rel="stylesheet" href="preloader_animations.css" />
+    <link rel="stylesheet" href="../../header/styles/calendar_style.css" />
+    <link rel="stylesheet" href="../../header/styles/reservation_style.css" />
     <title>ART BURGER</title>
 </head>
 
@@ -32,19 +31,14 @@
     <header class="main_header">
         <div class="topnav">
             <img id="openNav" src="../../images/ic_open_nav.svg" alt="Three horizontal lines to open navigation menu">
-            <a href="home.html" class="header_logo">
+            <a href="../home/home.html" class="header_logo">
                 <img src="../../images/restaraunt_logo.svg" alt="logo looks like glued capital letters A and B">
-                <svg xmlns="http://www.w3.org/2000/svg">
-                    <g>
-
-                    </g>
-                </svg>
             </a>
             <a id="button_booking" href="#">забронировать</a>
         </div>
         <div class="sidenav">
             <img id="closeNav" src="../../images/ic_close_nav.svg" alt="Cross ti close navigation menu">
-            <a href="home.html">НА ГЛАВНУЮ</a>
+            <a href="../home/home.html">НА ГЛАВНУЮ</a>
             <a href="../menu/menu.html">МЕНЮ</a>
             <a href="">О НАС</a>
             <a href="../events/events.html">МЕРОПРИЯТИЯ</a>
@@ -53,14 +47,16 @@
         </div>
         <div class="reservation">
             <div class="reservation_close_wrapper">
-                <img class="reservation_closeNav" src="../../images/ic_close_nav.svg" alt="Cross ti close navigation menu">
+                <img class="reservation_closeNav" src="../../images/ic_close_nav.svg"
+                    alt="Cross ti close navigation menu">
             </div>
             <div class="reservation_content_wrapper">
                 <div class="text_information_container">
                     <h1>Бронирование</h1>
                     <p>
                         Мы с нетерпением ждем возможности приветствовать вас в ArtBurger. Чтобы точно попасть к нам,
-                        рекомендуем бронировать заранее. Обращаем ваше внимание, что столики в ArtBurger бронируются не ранее чем
+                        рекомендуем бронировать заранее. Обращаем ваше внимание, что столики в ArtBurger бронируются не
+                        ранее чем
                         на следующий день от сегодняшней даты. И не позднее двух часов до закрытия ресторана<br>
                         <br>
                         Также заметьте, что вам поступит звонок от оператора ресторана после того, как
@@ -84,7 +80,8 @@
                                     <p class="navigation_content_box_text">Дата и время</p>
                                 </div>
                                 <div class="navigation_content_line_wrapper">
-                                    <img src="../../images/reservation_navigation_line.svg" alt="cosmetic line" class="line_img">
+                                    <img src="../../images/reservation_navigation_line.svg" alt="cosmetic line"
+                                        class="line_img">
                                 </div>
 
                                 <div class="navigation_content_box">
@@ -94,7 +91,8 @@
                                     <p class="navigation_content_box_text">Данные</p>
                                 </div>
                                 <div class="navigation_content_line_wrapper">
-                                    <img src="../../images/reservation_navigation_line.svg" alt="cosmetic line" class="line_img">
+                                    <img src="../../images/reservation_navigation_line.svg" alt="cosmetic line"
+                                        class="line_img">
                                 </div>
 
                                 <div class="navigation_content_box">
@@ -104,7 +102,8 @@
                                     <p class="navigation_content_box_text">Посадка</p>
                                 </div>
                                 <div class="navigation_content_line_wrapper">
-                                    <img src="../../images/reservation_navigation_line.svg" alt="cosmetic line" class="line_img">
+                                    <img src="../../images/reservation_navigation_line.svg" alt="cosmetic line"
+                                        class="line_img">
                                 </div>
 
                                 <div class="navigation_content_box">
@@ -134,7 +133,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <script src="scripts/calendar_creation.js"></script>
+                            <script src="../../header/scripts/calendar_creation.js"></script>
                         </div>
 
                         <div class="reservation_tab">
@@ -142,22 +141,22 @@
                                 <div class="reservation_contacts_input_wrapper">
                                     <label for="reservation_surname">Фамилия*</label>
                                     <input type="text" name="surname" id="reservation_surname">
-                                    
+
                                 </div>
                                 <div class="reservation_contacts_input_wrapper">
                                     <label for="reservation_name">Имя*</label>
                                     <input type="text" name="name" id="reservation_name">
-                                    
+
                                 </div>
                                 <div class="reservation_contacts_input_wrapper">
                                     <label for="reservation_phone">Телефон*</label>
                                     <input type="tel" name="phone" id="reservation_phone">
-                                    
+
                                 </div>
                                 <div class="reservation_contacts_input_wrapper">
                                     <label for="reservation_email">Почта*</label>
                                     <input type="email" name="email" id="reservation_email">
-                                    
+
                                 </div>
                             </div>
                             <div class="reservation_contacts_comment">
@@ -170,43 +169,90 @@
                             <div class="reservation_seating">
                                 <div class="people_number_chooser">
                                     <p>Сколько человек?</p>
-                                    <input type="numer" name="people_count">
+                                    <input type="number" name="people_count">
                                 </div>
+                                <p>Выберите столик</p>
                                 <div class="reservation_seating_chooser">
-                                    <div class="seating_chooser_part">
-                                        <div class="reservation_seating_chooser_row">
-                                            <!-- <div class="reservation_seating_chooser_seat">
-                                                <input type="radio" name="radioSeatingChooser" id="reservation_seatting_seat_1">
-                                                <label for="reservation_seatting_seat_1"></label>
-                                            </div> -->
+                                    <div>
+                                        <div class="seating_chooser_part part1">
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
                                         </div>
-                                        <div class="reservation_seating_chooser_row"></div>
-                                        <div class="reservation_seating_chooser_row"></div>
-                                        <div class="reservation_seating_chooser_row"></div>
-                                        <div class="reservation_seating_chooser_row"></div>
-                                        <div class="reservation_seating_chooser_row"></div>
                                     </div>
-                                    <div class="seating_chooser_part">
-                                        <div class="reservation_seating_chooser_row"></div>
-                                        <div class="reservation_seating_chooser_row"></div>
-                                    </div>
-                                    <div class="seating_chooser_part">
-                                        <div class="reservation_seating_chooser_row"></div>
-                                        <div class="reservation_seating_chooser_row"></div>
-                                        <div class="reservation_seating_chooser_row"></div>
+                                    <div>
+                                        <div class="seating_chooser_part part2">
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                        </div>
+                                        <div class="seating_chooser_part part3">
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                            <div class="reservation_seating_chooser_row"></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <script src="scripts/reservation_seating.js"></script>
+                                <div class="reservation_seating_showcase">
+                                    <div class="reservation_seating_showcase_part">
+                                        <div class="showcase_free_circle"></div>
+                                        <p>- свободно</p>
+                                    </div>
+                                    <div class="reservation_seating_showcase_part">
+                                        <div class="showcase_occupied_circle"></div>
+                                        <p>- занято</p>
+                                    </div>
+                                </div>
+                                <script src="../../header/scripts/reservation_seating.js"></script>
                             </div>
-                            
+
                         </div>
-                        <div class="reservation_tab"></div>
+                        <div class="reservation_tab">
+                            <div class="reservation_validation">
+                                <p class="reservation_validation_header">Проверьте свои данные</p>
+                                <div class="reservation_validation_row">
+                                    <p>Фамилия</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Имя</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Телефон</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Почта</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Дата</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Число гостей</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Время</p>
+                                    <p></p>
+                                </div>
+                                <div class="reservation_validation_row">
+                                    <p>Столик</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="next_prev_buttons_wrapper">
                             <button type="button" id="prevBtn">Назад</button>
                             <button type="button" id="nextBtn">Дальше</button>
                         </div>
-                        <script src="scripts/reservation_navigation.js"></script>
+                        <script src="../../header/scripts/reservation_validation.js"></script>
+                        <script src="../../header/scripts/reservation_navigation.js"></script>
                     </form>
                 </div>
             </div>
@@ -218,8 +264,10 @@
     <div class="home_page">
         <!-- PAGE 1 -->
         <div class="background_container">
-            <img src="../../images/restaraunt_logo.svg" alt="logo looks like glued capital letters A and B" class="home_main_logo">
-            <img class="home_background_img" src="../../images/home_background.jpg" alt="background image: summer terrace of the restaurant">
+            <img src="../../images/restaraunt_logo.svg" alt="logo looks like glued capital letters A and B"
+                class="home_main_logo">
+            <img class="home_background_img" src="../../images/home_background.jpg"
+                alt="background image: summer terrace of the restaurant">
         </div>
 
         <!-- PAGE 2 -->
