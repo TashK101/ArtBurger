@@ -4,13 +4,49 @@ function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
+function white2transparent(img)
+{
+    var c = document.createElement('canvas');
+
+    var w = img.width, h = img.height;
+
+    c.width = w;
+    c.height = h;
+
+    var ctx = c.getContext('2d');
+
+    ctx.drawImage(img, 0, 0, w, h);
+    var imageData = ctx.getImageData(0,0, w, h);
+    var pixel = imageData.data;
+
+    var r=0, g=1, b=2,a=3;
+    for (var p = 0; p<pixel.length; p+=4)
+    {
+        if (
+            pixel[p+r] === 255 &&
+            pixel[p+g] === 255 &&
+            pixel[p+b] === 255)
+        {pixel[p+a] = 0;}
+    }
+
+    ctx.putImageData(imageData,0,0);
+
+    return c.toDataURL('image/png');
+}
+
 if (window.addEventListener) {
     window.addEventListener('load', function () {
+        const sidenav = document.querySelector(".sidenav")
+        const sidenavOpen = document.querySelector("#openNav");
+        const sidenavClose = document.querySelector("#closeNav");
+
+        sidenavOpen.addEventListener("click", () => sidenav.style.width = "513px")
+        sidenavClose.addEventListener("click", () => sidenav.style.width = "0px")
         const tools = {};
+
         let canvas, canvaso, contexto;
         let currColor = 'black';
         let wasEraserUsed = false;
-        // Default tool. (chalk, line, rectangle)
         let tool;
         const tool_default = 'chalk';
         const tool_select = document.getElementById('selector');
@@ -34,8 +70,16 @@ if (window.addEventListener) {
         }
 
         function saveImg() {
-            const img  = canvaso.toDataURL('image/png');
-            document.write('<img src="'+img+'" alt="Image"/>');
+            const img  = white2transparent(canvaso);
+            console.log(img)
+            img.replace("image/png", "image/octet-stream");
+
+            var link = document.createElement('a');
+            link.href = img;
+            link.download = 'Download.jpg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
 
         function init() {
@@ -52,7 +96,7 @@ if (window.addEventListener) {
             context.lineWidth = 1.0;
 
             context.fillStyle = "white";
-            context.fillRect(0, 0, 897, 532);
+            context.fillRect(0, 0, canvaso.width, canvaso.height);
 
             const penButton = document.getElementById('penButton');
             const eraserButton = document.getElementById('eraserButton');
@@ -79,10 +123,10 @@ if (window.addEventListener) {
         }
 
         function ev_canvas(ev) {
-            if (ev.layerX || ev.layerX == 0) { // Firefox
+            if (ev.layerX || ev.layerX === 0) { // Firefox
                 ev._x = ev.layerX;
                 ev._y = ev.layerY;
-            } else if (ev.offsetX || ev.offsetX == 0) { // Opera
+            } else if (ev.offsetX || ev.offsetX === 0) { // Opera
                 ev._x = ev.offsetX;
                 ev._y = ev.offsetY;
             }
@@ -192,8 +236,6 @@ if (window.addEventListener) {
 const imageButton = document.getElementById('strokeButton');
 const selector = document.getElementById('strokeSelector');
 
-imageButton.addEventListener('click', toggleSelector);
-
 function toggleElementWithId(id) {
     document.getElementById(id).classList.toggle('hidden');
 }
@@ -203,24 +245,38 @@ function toggleElementWithId(id) {
 function changeColor(value) {
     const colors = [
         "#FFFFFF",
-        "#FEF4D4",
-        "#FCE9A7",
-        "#F9DF76",
-        "#F5D34A",
-        "#F1C51D",
-        "#EFC400",
-        "#D7AF00",
-        "#C69E00",
-        "#B28D00",
-        "#9D7C00",
-        "#886B00",
-        "#724E00",
-        "#5B3C00",
-        "#472C00",
-        "#331D00",
-        "#1F0E00",
-        "#0A0000"
+        "#F7F4F1",
+        "#EEE6E1",
+        "#E3D7CF",
+        "#DACBBF",
+        "#D1BEB0",
+        "#C8B1A0",
+        "#BDA18D",
+        "#B2927A",
+        "#AA866C",
+        "#A17B5E",
+        "#986E4E",
+        "#895935",
+        "#835029",
+        "#6E3306",
+        "#682D00",
+        "#622A00",
+        "#5B2700",
+        "#552400",
+        "#502200",
+        "#471E00",
+        "#421C00",
+        "#3B1900",
+        "#331600",
+        "#2D1300",
+        "#271100",
+        "#200E00",
+        "#180A00",
+        "#140800",
+        "#0D0600",
+        "#040100"
     ];
+    console.log(colors.length);
     context.strokeStyle = colors[Math.round(value)];
 }
 

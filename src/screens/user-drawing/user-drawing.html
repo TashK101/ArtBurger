@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="user-drawing.css">
+    <script src="user-drawing.js"></script>
+    <script src="../../script.js"></script>
+    <meta charset="UTF-8">
+    <title>Свой дизайн</title>
+</head>
+<body>
+<div class="topnav">
+    <img id="openNav" src="../../images/ic_open_nav.svg" alt="open nav">
+    <button id ="bookBtn">забронировать</button>
+</div>
+
+<div class="sidenav">
+    <img id="closeNav" src="../../images/ic_close_nav.svg" alt="close nav">
+    <a href="../home.html">НА ГЛАВНУЮ</a>
+    <a href="../menu_2.html">МЕНЮ</a>
+    <a href="../about_us/about_us.html">О НАС</a>
+    <a href="../about_us/about_us_2.html">О НАС 2</a>
+    <a href="../events.html">МЕРОПРИЯТИЯ</a>
+    <a href="../booking.html">ЗАБРОНИРОВАТЬ</a>
+    <a href="../contacts/contacts.html">КОНТАКТЫ</a>
+    <a href="../contacts/contacts_2.html">КОНТАКТЫ 2</a>
+</div>
+<!-- Wrapper Begins -->
+<div id="wrapper">
+    <div id="colorSelector" class="hidden strokeSelector">
+        <div class="slider">
+            <label>
+                <input type="range" min="0" max="31" value="31" oninput="toggleElementWithId('colorSelector'); changeColor(this.value);">
+            </label>
+        </div>
+    </div>
+    <div id="strokeSelector" class="hidden strokeSelector" onclick="toggleElementWithId('strokeSelector')"/>
+        <img src="drawing-images/stroke1.png" alt="13.0" onclick="context.lineWidth = '13.0';" class="optionsBtn"/>
+        <img src="drawing-images/stroke1.5.png" alt="13.0" onclick="context.lineWidth = '11.0';" class="optionsBtn"/>
+        <img src="drawing-images/stroke2.png" alt="9.0" onclick="context.lineWidth = '9.0';" class="optionsBtn"/>
+        <img src="drawing-images/stroke3.png" alt="6.0" onclick="context.lineWidth = '6.0';" class="optionsBtn"/>
+        <img src="drawing-images/stroke4.png" alt="1.0" onclick="context.lineWidth = '1.0';" class="optionsBtn"/>
+    </div>
+    <div id="figureSelector" class="hidden strokeSelector" onclick="toggleElementWithId('figureSelector')">
+        <button id="lineButton" class="optionsBtn">
+            <img src="drawing-images/line.png" alt="Line Button">
+        </button>
+        <button id="squareButton" class="optionsBtn">
+            <img src="drawing-images/square.png" alt="Square Button">
+        </button>
+    </div>
+
+    <div id="instruments">
+        <div id="blackboardPlaceholder">
+            <!-- Canvas Begins -->
+            <canvas id="drawingCanvas" height="600" width="900"></canvas>
+        </div>
+
+        <div id="options">
+            <button id="penButton" class="optionsBtn">
+                <img src="drawing-images/pen.png" alt="Pen Button">
+            </button>
+            <br>
+            <button id="eraserButton" class="optionsBtn">
+                <img src="drawing-images/eraser.png" alt="Eraser Button">
+            </button>
+            <div class="figure" onclick="toggleElementWithId('figureSelector')">
+                <button id="figureButton" class="optionsBtn">
+                    <img src="drawing-images/figures.png" alt="Figures Button">
+                </button>
+            </div>
+
+            <div class="strokeWeight"
+                 onclick="toggleElementWithId('strokeSelector')">
+                <button id="strokeButton" class="optionsBtn">
+                    <img src="drawing-images/stroke2.png" alt="Stroke Button">
+                </button>
+
+            </div>
+
+            <div class="colorPicker" onclick="toggleElementWithId('colorSelector')">
+                <button id="colorButton" class="optionsBtn">
+                    <img src="drawing-images/colorSelector.png" alt="Color Selector">
+                </button>
+            </div>
+
+
+
+            <button id="save" class="optionsBtn">
+                <img src="drawing-images/save.png" alt="Save Image" id="convertpngbtn" title="Save Image"/>
+            </button>
+
+        </div>
+
+
+    </div>
+    <p><!-- Tool Selector --><label for="selector"></label><select name="selector" id="selector" class="hidden">
+        <option value="chalk">Карандаш</option>
+        <option value="line">Прямая</option>
+        <option value="rect">Прямоугольник</option>
+    </select></p>
+</body>
+</html>
