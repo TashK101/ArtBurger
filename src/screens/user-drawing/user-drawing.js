@@ -4,8 +4,7 @@ function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
-function white2transparent(img)
-{
+function white2transparent(img) {
     const c = document.createElement('canvas');
 
     const w = img.width, h = img.height;
@@ -20,16 +19,16 @@ function white2transparent(img)
     const pixel = imageData.data;
 
     const r = 0, g = 1, b = 2, a = 3;
-    for (let p = 0; p<pixel.length; p+=4)
-    {
+    for (let p = 0; p < pixel.length; p += 4) {
         if (
-            pixel[p+r] === 255 &&
-            pixel[p+g] === 255 &&
-            pixel[p+b] === 255)
-        {pixel[p+a] = 0;}
+            pixel[p + r] === 255 &&
+            pixel[p + g] === 255 &&
+            pixel[p + b] === 255) {
+            pixel[p + a] = 0;
+        }
     }
 
-    ctx.putImageData(imageData,0,0);
+    ctx.putImageData(imageData, 0, 0);
 
     return c.toDataURL('image/png');
 }
@@ -70,7 +69,7 @@ if (window.addEventListener) {
         }
 
         function saveImg() {
-            const img  = white2transparent(canvaso);
+            const img = white2transparent(canvaso);
             console.log(img)
             img.replace("image/png", "image/octet-stream");
 
@@ -142,6 +141,7 @@ if (window.addEventListener) {
                 tool = new tools[this.value]();
             }
         }
+
         function img_update() {
             contexto.drawImage(canvas, 0, 0);
             context.clearRect(0, 0, canvas.width, canvas.height);
@@ -239,7 +239,6 @@ const selector = document.getElementById('strokeSelector');
 function toggleElementWithId(id) {
     document.getElementById(id).classList.toggle('hidden');
 }
-
 
 
 function changeColor(value) {

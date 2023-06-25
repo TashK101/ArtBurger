@@ -1,4 +1,3 @@
-
 function increment(btn) {
     const li = btn.parentNode;
     const count = li.querySelector('.count');
@@ -10,10 +9,11 @@ function decrement(btn) {
     const count = li.querySelector('.count');
     const currentValue = parseInt(count.textContent);
     if (currentValue > 0) {
-        count.textContent = currentValue - 1;
+        count.textContent = `${currentValue - 1}`;
     }
 }
-window.addEventListener('load', function() {
+
+window.addEventListener('load', function () {
     const sidenav = document.querySelector(".sidenav")
     const sidenavOpen = document.querySelector("#openNav");
     const sidenavClose = document.querySelector("#closeNav");
@@ -28,21 +28,19 @@ window.addEventListener('load', function() {
         li.innerHTML = li.innerHTML + repeatingHTML;
     }
 
-    document.querySelector('input[type="file"]').addEventListener('change', function() {
+    document.querySelector('input[type="file"]').addEventListener('change', function () {
         if (this.files && this.files[0]) {
-            const img = document.querySelector('.image-overlay');
+            const img = document.querySelector('.image-overlay') ?
+                document.querySelector('.image-overlay') : document.querySelector('.burger-img');
             img.onload = () => {
                 URL.revokeObjectURL(img.src);
             }
-
             img.src = URL.createObjectURL(this.files[0]);
             img.classList.remove('image-overlay');
-
-
             img.classList.add('burger-img');
             const relevantSize = Math.min(img.height, img.width)
 
-            img.style.clipPath = `circle(${relevantSize/2}px at 50% 50%)`
+            img.style.clipPath = `circle(${relevantSize / 2}px at 50% 50%)`
         }
     });
 

@@ -36,6 +36,7 @@ img {
     width: 30px;
     text-align: center;
 }
+
 .layered-image {
     background: url("custom-burger2.jpg");
     position: relative;
@@ -65,7 +66,6 @@ img {
     filter: sepia(120) brightness(120%);
     opacity: 80%;
 }
-
 
 
 .button-style {
@@ -101,6 +101,7 @@ input[type="file"] {
     text-align: left;
     margin: 50px;
 }
+
 .buy-button:hover {
     background-color: gray;
 }

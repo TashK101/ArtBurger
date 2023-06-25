@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="stylesheet" href="custom-burger-styles.css">
+    <link href="custom-burger-styles.css" rel="stylesheet">
     <script src="custom-burger.js"></script>
     <meta charset="utf-8">
     <title>Кастомный бургер</title>
@@ -9,12 +9,12 @@
 
 <body>
 <div class="topnav">
-    <img id="openNav" src="../../images/ic_open_nav.svg" alt="open nav">
-    <button id ="bookBtn">забронировать</button>
+    <img alt="open nav" id="openNav" src="../../images/ic_open_nav.svg">
+    <button id="bookBtn">забронировать</button>
 </div>
 
 <div class="sidenav">
-    <img id="closeNav" src="../../images/ic_close_nav.svg" alt="close nav">
+    <img alt="close nav" id="closeNav" src="../../images/ic_close_nav.svg">
     <a href="../home.html">НА ГЛАВНУЮ</a>
     <a href="../menu_2.html">МЕНЮ</a>
     <a href="../about_us/about_us.html">О НАС</a>
@@ -59,18 +59,18 @@
         <h3>ИЗОБРАЖЕНИЕ</h3>
     </div>
     <div id="picture">
-    <a href="../user-drawing/user-drawing.html" class="button-style"> <b>создать</b> </a>
-    <label for="file-upload" class="custom-file-upload button-style"> <b>загрузить</b> </label>
-    <input id="file-upload" type="file" accept="image/png, image/jpeg"/>
-    <br>
+        <a class="button-style" href="../user-drawing/user-drawing.html"> <b>создать</b> </a>
+        <label class="custom-file-upload button-style" for="file-upload"> <b>загрузить</b> </label>
+        <input accept="image/png, image/jpeg" id="file-upload" type="file"/>
+        <br>
         <div class="layered-image">
-            <img class="image-overlay" src="custom-burger2.jpg" alt="Бургер">
+            <img alt="Бургер" class="image-overlay" src="custom-burger2.jpg">
         </div>
-<!--    <div class="layered-image">-->
-<!--        <img class="image-base" src="custom-burger2.jpg" alt="Бургер">-->
-<!--        <img class="image-overlay" src="custom-burger2.jpg" alt="Бургер">-->
-<!--    </div>-->
-    <button class="buy-button">ЗАКАЗАТЬ</button>
+        <!--    <div class="layered-image">-->
+        <!--        <img class="image-base" src="custom-burger2.jpg" alt="Бургер">-->
+        <!--        <img class="image-overlay" src="custom-burger2.jpg" alt="Бургер">-->
+        <!--    </div>-->
+        <button class="buy-button">ЗАКАЗАТЬ</button>
     </div>
 </div>
 </body>
