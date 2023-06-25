@@ -37,7 +37,6 @@ function validateForm() {
        return !(dateChooser == null || hourChooser.value === "" || minuteChooser.value === "");
     }
     else if (currentTab === 1) {
-        return true;
         let inputFieldsReq = document.querySelectorAll(`.reservation_contacts_input_fields input`);
         for (let field of inputFieldsReq) {
             if (field.value === "") return false;

@@ -2,7 +2,6 @@ let partsTablesCount = [18, 6, 15];
 let currentPart = 1;
 let tabelNumber = 1;
 let parts = document.querySelectorAll(`.seating_chooser_part`);
-console.log(parts);
 
 
 for (let partNumer = 0; partNumer < parts.length;partNumer++) {
