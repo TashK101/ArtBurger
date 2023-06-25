@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css"/>
+    <link rel="stylesheet" href="order.css"/>
+    <title>ART BURGER</title>
+</head>
+<body>
+<div class="topnav">
+    <img id="openNav" src="../../images/ic_open_nav.svg" alt="open nav">
+    <button id="button_booking" onclick="openBookingPage()">забронировать</button>
+</div>
+<div class="sidenav">
+    <img id="closeNav" src="../../images/ic_close_nav.svg" alt="close nav">
+    <a href="../home/home.html">НА ГЛАВНУЮ</a>
+    <a href="../menu/menu.html">МЕНЮ</a>
+    <a href="">О НАС</a>
+    <a href="../events/events.html">МЕРОПРИЯТИЯ</a>
+    <a href="../booking/booking.html">ЗАБРОНИРОВАТЬ</a>
+    <a href="../contacts/contacts.html">КОНТАКТЫ</a>
+</div>
+<script src="../../script.js"></script>
+<script src="order.js"></script>
+<div class="order_page">
+    <div align="center">
+        <div class="order_main_container">
+            <div class="order_container_with_border">
+                <div class="long_text_container">
+                    <p class="text">Пожалуйста, уточните дату и время,
+                        к которым Вы хотели бы получить заказ</p>
+                </div>
+                <p><label id="booking_date_label"></label></p>
+            </div>
+            <div class="order_container_with_border">
+                <p class="text">А также номер Вашего столика</p>
+                <p><label id="table_number_label"></label></p>
+            </div>
+            <div class="order_container_with_border">
+                <p class="text">И пожелания к заказу</p>
+                <p><label><input class="input" type="text" placeholder="Комментарий"></label></p>
+            </div>
+            <div class="order_container">
+                <button class="main_button_black" id="confirm_order_btn">Завершить</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

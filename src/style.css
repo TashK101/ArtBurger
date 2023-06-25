@@ -13,29 +13,33 @@ body {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: white;
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    transition: 0.4s;
     padding-bottom: 30px;
 }
 
 .sidenav a {
+    padding: 30px 20px;
     font-size: 36px;
-    font-weight: normal;
-    margin-left: 35px;
+    font-weight: 400;
+    margin-left: 60px;
     margin-bottom: 20px;
-    padding: 8px 8px 8px 8px;
     display: block;
     color: black;
-    text-decoration: none
+    text-decoration: none;
+}
+
+.sidenav a:hover {
+    font-weight: 600;
 }
 
 .topnav {
     overflow: hidden;
+    z-index: 1;
     background-color: black;
     position: fixed;
     top: 0;
@@ -43,29 +47,238 @@ body {
     height: 102px;
 }
 
-.topnav #bookBtn {
+.topnav #button_booking {
+    text-align: center;
+    width: 240px;
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 700;
     padding: 10px 20px;
     border: 3px solid white;
     background-color: transparent;
     color: white;
-    float: right;
-    margin: 18px 50px 18px 0;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    text-decoration: none;
 }
 
-.topnav #logo {
-    margin: auto;
+.topnav #button_booking:hover {
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 #openNav {
-    margin: 18px 0 18px 50px;
+    cursor: pointer;
+    top: 50%;
+    left: 50px;
+    position: absolute;
+    transform: translate(0%, -50%);
 }
 
 #closeNav {
+    cursor: pointer;
     width: 61px;
     height: 61px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 71px;
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-bottom: 50px;
 }
+
+.reservation {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation_close_wrapper {
+    display: flex;
+    justify-content: right;
+}
+
+.reservation_closeNav {
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 34px;
+}
+
+.reservation_content_wrapper {
+    display: flex;
+}
+
+.reservation_content_wrapper > div {
+    width: 50%;
+    margin: 0 30px 0 30px;
+}
+
+.reservation_content_wrapper > div > h1 {
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.header_logo {
+    position: absolute;
+    height: 71px;
+    width: 71px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header_logo > img {
+    height: inherit;
+}
+
+.main_button {
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: 700;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 3px solid black;
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+}
+
+.main_button:hover {
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.main_button_black {
+    cursor: pointer;
+    width: 232px;
+    font-size: 34px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+}
+
+.main_button_black:hover {
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.main_button_white {
+    cursor: pointer;
+    width: 170px;
+    font-size: 28px;
+    font-weight: 700;
+    display: inline-block;
+    border: 1px solid white;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+}
+
+.main_button_white:hover {
+    font-weight: 400;
+    background-color: #CCC;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: row;
+    max-height: 110vh;
+    width: 100%;
+}
+
+.main_container_with_margin {
+    display: flex;
+    max-height: 110vh;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 102px;
+}
+
+.container_with_content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.container_with_image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.container_with_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sub_container_with_content {
+    margin: 0 auto;
+    max-width: 85%;
+}
+
+.header_text {
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header_text_with_margin {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 16px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 80px;
+}
+
+.description_text {
+    font-size: 30px;
+}
+
+.description_text_with_margin {
+    font-size: 24px;
+    line-height: 35px;
+    margin-bottom: 46px;
+}
+
+
+.home_background_img {
+    max-height: 980px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background_container {
+    max-height: 980px;
+    position: relative;
+}
+
+.background_container > .header_logo {
+    width: 400px;
+}
+
+/* Это позволяет скролить дискретно, без промежуточных состояний. (WIP)
+.home_page {
+    overflow-y: auto;
+    height: 1050px;
+    scroll-snap-type: y mandatory;
+}
+
+.home_page > div {
+    scroll-snap-align: start;
+} */

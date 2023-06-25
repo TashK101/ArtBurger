@@ -1,0 +1,164 @@
+:root {
+    --preloader__height: 300px;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    animation: defreeze_anim .001s linear forwards;
+    animation-delay: 4s;
+}
+
+.preloader_scene {
+    width: 100vw;
+    position: absolute;
+    z-index: 10;
+}
+
+.back {
+    background-image: url(../../images/preloader/preloader_back.jpg);
+    background-size: cover;
+    position: fixed;
+    
+    height: 100vh;
+    width: 100vw;
+    animation: fade_out_anim 0.95s linear forwards;
+    animation-delay: 4s;
+}
+
+.home_main_logo {
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    left: 50%;
+    height: var(--preloader__height);
+    transform: translate(-50%, -50%);
+    animation: main_logo_fade_in_anim 1s linear forwards;
+    animation-delay: 3.95s;
+}
+
+.preloader_scene {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.animation_field {
+    height: var(--preloader__height);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} 
+
+.word_wrapper_art,
+.word_wrapper_burger {
+    flex-basis: 100%;
+    width: 0;
+    position: relative;
+    display: flex;
+}
+
+.word_wrapper_art {
+    justify-content: right;
+    height: var(--preloader__height);
+    right: 100%;
+    animation: art_wrapper_anim 4s linear forwards; 
+}
+
+.word_wrapper_burger {
+    left: 100%;
+    animation: burger_wrapper_anim 4s linear forwards;
+}
+
+#word_art,
+#word_burger {
+    animation: fade_out_anim .85s linear forwards;
+    animation-delay: 2.4s;
+}
+
+#symbol_a {
+    height: var(--preloader__height);
+    position: absolute;
+    right: 167.376px;
+}
+
+#symbol_b {
+    height: var(--preloader__height);
+    position: absolute;
+}
+
+#symbol_a,
+#symbol_b {
+    animation: fade_out_anim .2s linear forwards;
+    animation-delay: 3.95s;
+}
+
+@keyframes art_wrapper_anim {
+    40% {
+        right: 0;
+    }
+
+    60% {
+        right: 0;
+    }
+
+    100% {
+        right: -214.99px;
+    }
+}
+
+@keyframes burger_wrapper_anim {
+    40% {
+        left: 0;
+    }
+
+    60% {
+        left: 0;
+    }
+    100% {
+        left: -21px;
+    }
+}
+
+@keyframes fade_out_anim {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes main_logo_fade_in_anim {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: var(--preloader__height);
+    }
+
+    100% {
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 400px;
+    }
+}
+
+@keyframes defreeze_anim {
+    to {
+        height: auto;
+        width: auto;
+        overflow-y: visible;
+    }
+}

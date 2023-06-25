@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link href="custom-burger-styles.css" rel="stylesheet">
+    <script src="custom-burger.js"></script>
+    <meta charset="utf-8">
+    <title>Кастомный бургер</title>
+</head>
+
+<body>
+<div class="topnav">
+    <img alt="open nav" id="openNav" src="../../images/ic_open_nav.svg">
+    <button id="bookBtn">забронировать</button>
+</div>
+
+<div class="sidenav">
+    <img alt="close nav" id="closeNav" src="../../images/ic_close_nav.svg">
+    <a href="../home.html">НА ГЛАВНУЮ</a>
+    <a href="../menu_2.html">МЕНЮ</a>
+    <a href="../about_us/about_us.html">О НАС</a>
+    <a href="../about_us/about_us_2.html">О НАС 2</a>
+    <a href="../events.html">МЕРОПРИЯТИЯ</a>
+    <a href="../booking.html">ЗАБРОНИРОВАТЬ</a>
+    <a href="../contacts/contacts.html">КОНТАКТЫ</a>
+    <a href="../contacts/contacts_2.html">КОНТАКТЫ 2</a>
+</div>
+<div class="container">
+    <h1>СОБЕРИТЕ БУРГЕР</h1>
+    <div class="components">
+        <h3>ОСНОВА</h3>
+        <ul id="base">
+            <li>Котлета из мраморной говядины</li>
+            <li>Котлета из курицы</li>
+            <li>Курица</li>
+            <li>Креветки тигровые</li>
+            <li>Яичница</li>
+        </ul>
+        <h3>СЫР</h3>
+        <ul id="cheese">
+            <li>Сыр Моцарелла</li>
+            <li>Сыр Чеддер</li>
+            <li>Сыр Пармезан</li>
+        </ul>
+        <h3>ОВОЩИ</h3>
+        <ul id="veg">
+            <li>Помидоры</li>
+            <li>Салат Айсберг</li>
+            <li>Руккола</li>
+            <li>Огурцы свежие</li>
+            <li>Огурцы маринованные</li>
+            <li>Перец халапеньо</li>
+        </ul>
+        <h3>СОУСЫ</h3>
+        <ul id="sauces">
+            <li>Томатный</li>
+            <li>Сырный</li>
+            <li>Устричный</li>
+        </ul>
+        <h3>ИЗОБРАЖЕНИЕ</h3>
+    </div>
+    <div id="picture">
+        <button class="create_custom_btn" onclick="window.location='../user-drawing/user-drawing.html'">СОЗДАТЬ</button>
+        <label class="custom-file-upload button-style" for="file-upload"> <b>ЗАГРУЗИТЬ</b> </label>
+        <input accept="image/png, image/jpeg" id="file-upload" type="file"/>
+        <br>
+        <div class="layered-image">
+            <img alt="Бургер" class="image-overlay" src="custom-burger2.jpg">
+        </div>
+        <button class="confirm_custom_btn" id="buy-button">ЗАКАЗАТЬ</button>
+    </div>
+</div>
+</body>
+</html>
