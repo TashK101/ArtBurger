@@ -50,16 +50,27 @@
             <li>Огурцы маринованные</li>
             <li>Перец халапеньо</li>
         </ul>
+        <h3>СОУСЫ</h3>
+        <ul id="sauces">
+            <li>Томатный</li>
+            <li>Сырный</li>
+            <li>Устричный</li>
+        </ul>
         <h3>ИЗОБРАЖЕНИЕ</h3>
     </div>
-    <br>
-    <a href="../user-drawing/user-drawing.html" class="button-style"> Создать </a> или
-    <label for="file-upload" class="custom-file-upload button-style"> Загрузить </label>
+    <div id="picture">
+    <a href="../user-drawing/user-drawing.html" class="button-style"> <b>создать</b> </a>
+    <label for="file-upload" class="custom-file-upload button-style"> <b>загрузить</b> </label>
     <input id="file-upload" type="file" accept="image/png, image/jpeg"/>
-    <div class="layered-image">
-        <img class="image-base" src="custom-burger2.jpg" alt="Бургер">
-        <img class="image-overlay" src="custom-burger2.jpg" alt="Бургер">
-        <canvas class="my-canvas"></canvas>
+    <br>
+        <div class="layered-image">
+            <img class="image-overlay" src="custom-burger2.jpg" alt="Бургер">
+        </div>
+<!--    <div class="layered-image">-->
+<!--        <img class="image-base" src="custom-burger2.jpg" alt="Бургер">-->
+<!--        <img class="image-overlay" src="custom-burger2.jpg" alt="Бургер">-->
+<!--    </div>-->
+    <button class="buy-button">ЗАКАЗАТЬ</button>
     </div>
 </div>
 </body>

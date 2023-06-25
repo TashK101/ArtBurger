@@ -24,24 +24,22 @@ window.addEventListener('load', function() {
     const listItems = document.getElementsByTagName('li');
     for (let i = 0; i < listItems.length; i++) {
         const li = listItems[i];
-        const repeatingHTML = '<div class="buttons"><button class="increment" onclick="increment(this)">+</button><span class="count">0</span><button class="increment" onclick="decrement(this)">-</button></div>';
+        const repeatingHTML = '<div class="buttons"><button class="increment" onclick="increment(this)">+</button><span class="count">0</span>шт. <button class="increment" onclick="decrement(this)">-</button></div>';
         li.innerHTML = li.innerHTML + repeatingHTML;
     }
 
     document.querySelector('input[type="file"]').addEventListener('change', function() {
         if (this.files && this.files[0]) {
             const img = document.querySelector('.image-overlay');
-            const canvas = document.querySelector('.my-canvas');
             img.onload = () => {
                 URL.revokeObjectURL(img.src);
             }
 
             img.src = URL.createObjectURL(this.files[0]);
             img.classList.remove('image-overlay');
-            canvas.classList.remove('my-canvas');
+
 
             img.classList.add('burger-img');
-            canvas.classList.add('burger-img');
             const relevantSize = Math.min(img.height, img.width)
 
             img.style.clipPath = `circle(${relevantSize/2}px at 50% 50%)`
