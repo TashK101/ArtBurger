@@ -6,21 +6,21 @@ function insertAfter(referenceNode, newNode) {
 
 function white2transparent(img)
 {
-    var c = document.createElement('canvas');
+    const c = document.createElement('canvas');
 
-    var w = img.width, h = img.height;
+    const w = img.width, h = img.height;
 
     c.width = w;
     c.height = h;
 
-    var ctx = c.getContext('2d');
+    const ctx = c.getContext('2d');
 
     ctx.drawImage(img, 0, 0, w, h);
-    var imageData = ctx.getImageData(0,0, w, h);
-    var pixel = imageData.data;
+    const imageData = ctx.getImageData(0, 0, w, h);
+    const pixel = imageData.data;
 
-    var r=0, g=1, b=2,a=3;
-    for (var p = 0; p<pixel.length; p+=4)
+    const r = 0, g = 1, b = 2, a = 3;
+    for (let p = 0; p<pixel.length; p+=4)
     {
         if (
             pixel[p+r] === 255 &&
@@ -74,7 +74,7 @@ if (window.addEventListener) {
             console.log(img)
             img.replace("image/png", "image/octet-stream");
 
-            var link = document.createElement('a');
+            const link = document.createElement('a');
             link.href = img;
             link.download = 'Download.jpg';
             document.body.appendChild(link);

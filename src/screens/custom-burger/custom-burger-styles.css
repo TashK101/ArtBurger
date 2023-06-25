@@ -1,6 +1,7 @@
 body {
-    background-color: white;
-    font-family: Arial, sans-serif;
+    background: #e1e1e1;
+    font-family: "Belle", "Comic Sans MS", cursive;
+    font-size: 25px;
 }
 
 .container {
@@ -12,8 +13,9 @@ body {
 li {
     list-style: none;
     padding: 5px;
-    margin: 5px;
-    font-size: 16px;
+    margin: 10px;
+    font-size: 20px;
+    text-align: left;
 }
 
 li span {
@@ -28,6 +30,11 @@ img {
     max-height: 100%;
 }
 
+.increment {
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+}
 .layered-image {
     position: relative;
     max-width: 100%;
@@ -70,6 +77,11 @@ img {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.increment {
+    background: transparent;
+
 }
 
 input[type="file"] {

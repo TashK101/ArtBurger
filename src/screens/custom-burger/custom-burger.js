@@ -1,14 +1,14 @@
 
 function increment(btn) {
-    var li = btn.parentNode;
-    var count = li.querySelector('.count');
+    const li = btn.parentNode;
+    const count = li.querySelector('.count');
     count.textContent = parseInt(count.textContent) + 1;
 }
 
 function decrement(btn) {
-    var li = btn.parentNode;
-    var count = li.querySelector('.count');
-    var currentValue = parseInt(count.textContent);
+    const li = btn.parentNode;
+    const count = li.querySelector('.count');
+    const currentValue = parseInt(count.textContent);
     if (currentValue > 0) {
         count.textContent = currentValue - 1;
     }
@@ -20,6 +20,14 @@ window.addEventListener('load', function() {
 
     sidenavOpen.addEventListener("click", () => sidenav.style.width = "513px")
     sidenavClose.addEventListener("click", () => sidenav.style.width = "0px")
+
+    const listItems = document.getElementsByTagName('li');
+    for (let i = 0; i < listItems.length; i++) {
+        const li = listItems[i];
+        const repeatingHTML = '<div class="buttons"><button class="increment" onclick="increment(this)">+</button><span class="count">0</span><button class="increment" onclick="decrement(this)">-</button></div>';
+        li.innerHTML = li.innerHTML + repeatingHTML;
+    }
+
     document.querySelector('input[type="file"]').addEventListener('change', function() {
         if (this.files && this.files[0]) {
             const img = document.querySelector('.image-overlay');
