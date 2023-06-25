@@ -1,0 +1,180 @@
+.navigation_wrapper {
+    margin-bottom: 14px;
+}
+
+.navigation_content {
+    display: flex;
+    height: 63px;
+}
+
+.navigation_wrapper p {
+    margin: 0;
+}
+
+.navigation_content_box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 25%;
+}
+
+.navigation_content_box_circle {
+    display: flex;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.44;
+}
+
+.navigation_content_box_circle > p {
+    color: white;
+}
+
+.navigation_content_line_wrapper {
+    margin-left: -23.5px;
+    margin-right: -23.5px;
+    display: flex;
+    align-items: center;
+}
+
+.navigation_content_line_wrapper > .line_img {
+    height: 1px;
+    color: black;
+    opacity: 0.44;
+}
+
+.time_chooser_wrapper > .text_block {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.time_chooser_wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    max-width: 332px;
+    max-height: 133px;
+    margin: 0 auto 20px auto;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.44);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.time_chooser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time_chooser > .colon {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.time_chooser__hour > select,
+.time_chooser__minute > select {
+    width: 87px;
+    height: 48px;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.next_prev_buttons_wrapper {
+    max-width: 332px;
+    margin: 0 auto;
+}
+
+.next_prev_buttons_wrapper > button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    height: 35px;
+    width: 81px;
+    cursor: pointer;
+    border: none;
+    transition: .3s;
+}
+
+#nextBtn {
+    float: right;
+}
+
+.next_prev_buttons_wrapper button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#prevBtn {
+    display: none;
+}
+
+.reservation_tab {
+    display: none;
+}
+
+.reservation_contacts_input_fields,
+.reservation_contacts_comment {
+    background-color: white;
+    border-radius: 5px;
+    margin: 0 auto 20px auto;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.44);
+    max-width: 332px;
+    padding: 15px 30px;
+}
+
+.reservation_contacts_input_wrapper,
+.reservation_contacts_comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.reservation_contacts_input_wrapper > input,
+.reservation_contacts_comment > input {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+    height: 30px;
+    border-radius: 5px;
+}
+
+.reservation_contacts_input_wrapper > label,
+.reservation_contacts_comment > label {
+    opacity: 0.44;
+    font-size: 14px;
+}
+
+.wrong {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.reservation_seating_chooser_seat > input {
+    display: none;
+}
+
+.reservation_seating_chooser_seat > label {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid 2px rgba(0, 0, 0, 0.8);
+    display: block;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.reservation_seating_chooser_seat > label:hover,
+.reservation_seating_chooser_seat > input[type=radio]:checked+label {
+    background-color: gray;
+    border-color: black;
+}
+
+.reservation_seating_chooser_row {
+    display: flex;
+}

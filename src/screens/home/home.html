@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="utf-8">
@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="preloader_animations.css" />
+    <link rel="stylesheet" href="reservation_style.css" />
+    <link rel="stylesheet" href="calendar_style.css" />
     <link rel="import" href="preloader.html">
     <title>ART BURGER</title>
 </head>
@@ -58,24 +60,154 @@
                     <h1>Бронирование</h1>
                     <p>
                         Мы с нетерпением ждем возможности приветствовать вас в ArtBurger. Чтобы точно попасть к нам,
-                        рекомендуем бронировать заранее.<br>
+                        рекомендуем бронировать заранее. Обращаем ваше внимание, что столики в ArtBurger бронируются не ранее чем
+                        на следующий день от сегодняшней даты. И не позднее двух часов до закрытия ресторана<br>
                         <br>
-                        Пожалуйста, обратите внимание, что вы получите подтверждение по электронной почте после того,
-                        как
-                        ваше бронирование будет оформлено. Если вы не получили электронного письма с подтверждением,
-                        возможно, в вашем бронировании произошла ошибка. Пожалуйста, свяжитесь с нашей службой
-                        бронирования
-                        по телефону +788888888888, если у вас есть какие-либо вопросы.<br>
+                        Также заметьте, что вам поступит звонок от оператора ресторана после того, как
+                        ваше бронирование будет оформлено. Если вам не позвонили для подтверждения,
+                        возможно, в вашем бронировании произошла ошибка. Пожалуйста, свяжитесь с нашей горячей линией
+                        по телефону +788888888888 самостоятельно.<br>
                         <br>
-                        Если вы плохо себя чувствуете, пожалуйста, оставайтесь дома и позвоните в нашу службу
-                        бронирования,
-                        чтобы отложить бронирование на другое время. ArtBurger принимает все возможные меры
-                        предосторожности
-                        для обеспечения здоровья и безопасности наших гостей, нашего персонала и поставщиков.
+                        Если вы плохо себя чувствуете, пожалуйста, оставайтесь дома и позвоните на нашу горячую линию,
+                        чтобы перенести бронирование. ArtBurger придерживается всех мер и предписаний
+                        для обеспечения здоровья и безопасности наших дорогих гостей и нашего персонала.
                     </p>
                 </div>
                 <div class="form_container">
-                    <p>TEST</p>
+                    <form>
+                        <div class="navigation_wrapper">
+                            <div class="navigation_content">
+                                <div class="navigation_content_box">
+                                    <div class="navigation_content_box_circle">
+                                        <p>1</p>
+                                    </div>
+                                    <p class="navigation_content_box_text">Дата и время</p>
+                                </div>
+                                <div class="navigation_content_line_wrapper">
+                                    <img src="../../images/reservation_navigation_line.svg" alt="line" class="line_img">
+                                </div>
+
+                                <div class="navigation_content_box">
+                                    <div class="navigation_content_box_circle">
+                                        <p>2</p>
+                                    </div>
+                                    <p class="navigation_content_box_text">Данные</p>
+                                </div>
+                                <div class="navigation_content_line_wrapper">
+                                    <img src="../../images/reservation_navigation_line.svg" alt="line" class="line_img">
+                                </div>
+
+                                <div class="navigation_content_box">
+                                    <div class="navigation_content_box_circle">
+                                        <p>3</p>
+                                    </div>
+                                    <p class="navigation_content_box_text">Посадка</p>
+                                </div>
+                                <div class="navigation_content_line_wrapper">
+                                    <img src="../../images/reservation_navigation_line.svg" alt="line" class="line_img">
+                                </div>
+
+                                <div class="navigation_content_box">
+                                    <div class="navigation_content_box_circle">
+                                        <p>4</p>
+                                    </div>
+                                    <p class="navigation_content_box_text">Подтверждение</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reservation_tab">
+                            <div class="calendar"></div>
+                            <div class="time_chooser_wrapper">
+                                <p class="text_block">Какое время?</p>
+                                <div class="time_chooser">
+                                    <div class="time_chooser__hour">
+                                        <select name="hour_chooser" id="time_chooser__hour_select" required>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                    <p class="colon">:</p>
+                                    <div class="time_chooser__minute">
+                                        <select name="minute_chooser" id="time_chooser__minute_select" required>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <script src="calendar_creation.js"></script>
+                        </div>
+
+                        <div class="reservation_tab">
+                            <div class="reservation_contacts_input_fields">
+                                <div class="reservation_contacts_input_wrapper">
+                                    <label for="reservation_surname">Фамилия*</label>
+                                    <input type="text" name="surname" id="reservation_surname">
+                                    
+                                </div>
+                                <div class="reservation_contacts_input_wrapper">
+                                    <label for="reservation_name">Имя*</label>
+                                    <input type="text" name="name" id="reservation_name">
+                                    
+                                </div>
+                                <div class="reservation_contacts_input_wrapper">
+                                    <label for="reservation_phone">Телефон*</label>
+                                    <input type="tel" name="phone" id="reservation_phone">
+                                    
+                                </div>
+                                <div class="reservation_contacts_input_wrapper">
+                                    <label for="reservation_email">Почта*</label>
+                                    <input type="email" name="email" id="reservation_email">
+                                    
+                                </div>
+                            </div>
+                            <div class="reservation_contacts_comment">
+                                <label for="reservation_comment">Комментарий</label>
+                                <input type="text" name="comment" id="reservation_comment">
+                            </div>
+                        </div>
+
+                        <div class="reservation_tab">
+                            <div class="reservation_seating">
+                                <div class="people_number_chooser">
+                                    <p>Сколько человек?</p>
+                                    <input type="numer" name="people_count">
+                                </div>
+                                <div class="reservation_seating_chooser">
+                                    <div class="seating_chooser_part">
+                                        <div class="reservation_seating_chooser_row">
+                                            <!-- <div class="reservation_seating_chooser_seat">
+                                                <input type="radio" name="radioSeatingChooser" id="reservation_seatting_seat_1">
+                                                <label for="reservation_seatting_seat_1"></label>
+                                            </div> -->
+                                        </div>
+                                        <div class="reservation_seating_chooser_row"></div>
+                                        <div class="reservation_seating_chooser_row"></div>
+                                        <div class="reservation_seating_chooser_row"></div>
+                                        <div class="reservation_seating_chooser_row"></div>
+                                        <div class="reservation_seating_chooser_row"></div>
+                                    </div>
+                                    <div class="seating_chooser_part">
+                                        <div class="reservation_seating_chooser_row"></div>
+                                        <div class="reservation_seating_chooser_row"></div>
+                                    </div>
+                                    <div class="seating_chooser_part">
+                                        <div class="reservation_seating_chooser_row"></div>
+                                        <div class="reservation_seating_chooser_row"></div>
+                                        <div class="reservation_seating_chooser_row"></div>
+                                    </div>
+                                </div>
+                                <script src="reservation_seatting.js"></script>
+                            </div>
+                            
+                        </div>
+                        <div class="reservation_tab"></div>
+
+                        <div class="next_prev_buttons_wrapper">
+                            <button type="button" id="prevBtn">Назад</button>
+                            <button type="button" id="nextBtn">Дальше</button>
+                        </div>
+                        <script src="reservation_navigation.js"></script>
+                    </form>
                 </div>
             </div>
         </div>
@@ -154,10 +286,6 @@
         </div>
 
     </div>
-    <script>
-        window.scrollTo(0, 0);
-        console.log("ALARM!")
-    </script>
 </body>
 
 </html>
