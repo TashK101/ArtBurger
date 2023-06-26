@@ -19,7 +19,7 @@ function updateUI() {
     const confirmOrderButton = document.getElementById('confirm_order_btn')
     confirmOrderButton.addEventListener("click", function () {
         if (tableNumberInput.value !== "" && bookingDateInput.value !== "") {
-            window.location="../order/final/order_final.html";
+            window.open("../order/final/order_final.html");
             localStorage.clear()
         }
     })

@@ -18,6 +18,7 @@ tabs.forEach(tab => {
         })
         tab.classList.add('active')
         target.classList.add('active')
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
     })
 })
 

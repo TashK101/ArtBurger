@@ -9,7 +9,7 @@ showTab(currentTab);
 function showTab(n) {
     let tab = document.querySelectorAll(".reservation_tab");
     tab[n].style.display = "block";
-    if (n == 0) {
+    if (n === 0) {
         prevBtn.style.display = "none";
     } else {
         prevBtn.style.display = "inline";
@@ -18,8 +18,15 @@ function showTab(n) {
 }
 
 function nextPrev(n) {
-    var tab = document.querySelectorAll(".reservation_tab");
-    if (n == 1 && !validateForm()) return false;
+    const tab = document.querySelectorAll(".reservation_tab");
+
+    if (currentTab === 3) {
+       window.open("screens/order/final/order_final.html");
+        return false
+    }
+
+    if (n === 1 && !validateForm()) return false;
+
     tab[currentTab].style.display = "none";
     currentTab = currentTab + n;
 
