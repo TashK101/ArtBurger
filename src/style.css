@@ -11,7 +11,8 @@ body {
 
 .sidenav {
     height: 100%;
-    width: 0;
+    width: 513px;
+    transform: translateX(-100%);
     position: fixed;
     z-index: 2;
     top: 0;
@@ -87,12 +88,13 @@ body {
 
 .reservation {
     height: 100%;
-    width: 0;
+    width: 60%;
+    transform: translateX(100%);
     position: fixed;
     z-index: 2;
     top: 0;
     right: 0;
-    background-color: white;
+    background-color: #EBEBEB;
     overflow-x: hidden;
     transition: 0.4s;
     padding-bottom: 30px;
@@ -116,12 +118,12 @@ body {
     display: flex;
 }
 
-.reservation_content_wrapper > div {
+.reservation_content_wrapper>div {
     width: 50%;
     margin: 0 30px 0 30px;
 }
 
-.reservation_content_wrapper > div > h1 {
+.reservation_content_wrapper>div>h1 {
     text-align: center;
     margin: 0 0 40px 0;
 }
@@ -257,18 +259,18 @@ body {
 
 
 .home_background_img {
-    max-height: 980px;
+    max-height: 100vh;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .background_container {
-    max-height: 980px;
+    max-height: 100vh;
     position: relative;
 }
 
-.background_container > .header_logo {
+.background_container>.header_logo {
     width: 400px;
 }
 

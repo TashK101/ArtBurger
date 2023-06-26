@@ -1,0 +1,323 @@
+.navigation_wrapper {
+    margin-bottom: 14px;
+}
+
+.navigation_content {
+    display: flex;
+    height: 63px;
+}
+
+.navigation_wrapper p {
+    margin: 0;
+}
+
+.navigation_content_box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 25%;
+}
+
+.navigation_content_box_circle {
+    display: flex;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.44;
+}
+
+.navigation_content_box_circle > p {
+    color: white;
+}
+
+.navigation_content_line_wrapper {
+    margin-left: -23.5px;
+    margin-right: -23.5px;
+    display: flex;
+    align-items: center;
+}
+
+.navigation_content_line_wrapper > .line_img {
+    height: 1px;
+    color: black;
+    opacity: 0.44;
+}
+
+.time_chooser_wrapper > .text_block {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.time_chooser_wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    max-width: 332px;
+    max-height: 133px;
+    margin: 0 auto 20px auto;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.44);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.time_chooser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time_chooser > .colon {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.time_chooser__hour > select,
+.time_chooser__minute > select {
+    width: 87px;
+    height: 48px;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.next_prev_buttons_wrapper {
+    max-width: 332px;
+    margin: 0 auto;
+}
+
+.next_prev_buttons_wrapper > button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    height: 35px;
+    width: 81px;
+    cursor: pointer;
+    border: none;
+    transition: .3s;
+}
+
+#nextBtn {
+    float: right;
+}
+
+.next_prev_buttons_wrapper button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#prevBtn {
+    display: none;
+}
+
+.reservation_tab {
+    display: none;
+    max-width: 100%;
+}
+
+.reservation_contacts_input_fields,
+.reservation_contacts_comment {
+    background-color: white;
+    border-radius: 5px;
+    margin: 0 auto 20px auto;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.44);
+    max-width: 332px;
+    padding: 15px 30px;
+}
+
+.reservation_contacts_input_wrapper,
+.reservation_contacts_comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.reservation_contacts_input_wrapper > input,
+.reservation_contacts_comment > input {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+    height: 30px;
+    border-radius: 5px;
+}
+
+.reservation_contacts_input_wrapper > label,
+.reservation_contacts_comment > label {
+    opacity: 0.44;
+    font-size: 14px;
+}
+
+.wrong {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.reservation_seating {
+    max-width: 332px;
+    margin: 20px auto;
+}
+
+.reservation_seating > p {
+    font-size: 22px;
+    margin: 40px 0 20px 0;
+    text-align: center;
+}
+
+.people_number_chooser {
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.44);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.people_number_chooser > input {
+    margin-bottom: 20px;
+    width: 80px;
+    height: 40px;
+    font-size: 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.3)
+}
+
+.people_number_chooser > p {
+    font-size: 28px;
+}
+
+.reservation_seating_chooser_seat > input {
+    display: none;
+}
+
+.reservation_seating_chooser_seat > label {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid 2px rgba(0, 0, 0, 0.8);
+    display: block;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.reservation_seating_chooser_seat > label:hover,
+.reservation_seating_chooser_seat > input[type=radio]:checked+label {
+    background-color: gray;
+    border-color: black;
+}
+
+.reservation_seating_chooser_row {
+    display: flex;
+}
+
+.reservation_seating_chooser {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    border: solid 2px black;
+}
+
+.seating_chooser_part {
+    padding: 8px;
+    margin: 10px;
+}
+
+.reservation_seating_chooser_row {
+    justify-content: center;
+}
+
+.seating_chooser_part.part1 {
+    border-left: solid 1px rgba(0, 0, 0, 0.44);
+}
+
+.seating_chooser_part.part2 {
+    border-top: solid 1px rgba(0, 0, 0, 0.44);
+}
+
+.seating_chooser_part.part3 {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.44);
+}
+
+.reservation_seating_showcase {
+    display: flex;
+    justify-content: center;
+}
+
+.reservation_seating_showcase_part {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.showcase_free_circle,
+.showcase_occupied_circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    margin-right: 5px;
+}
+
+.showcase_occupied_circle {
+    background-color: gray;
+    border-color: black;
+}
+
+.reservation_seating_table_preview_img {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    max-width: 40%;
+}
+
+.reservation_seating_lable.table_type_1:hover ~ .reservation_seating_table_preview_img.type1,
+.reservation_seating_lable.table_type_2:hover ~ .reservation_seating_table_preview_img.type2,
+.reservation_seating_lable.table_type_3:hover ~ .reservation_seating_table_preview_img.type3,
+.reservation_seating_lable.table_type_4:hover ~ .reservation_seating_table_preview_img.type4,
+.reservation_seating_lable.table_type_5:hover ~ .reservation_seating_table_preview_img.type5,
+.reservation_seating_lable.table_type_6:hover ~ .reservation_seating_table_preview_img.type6,
+.reservation_seating_lable.table_type_7:hover ~ .reservation_seating_table_preview_img.type7,
+.reservation_seating_lable.table_type_8:hover ~ .reservation_seating_table_preview_img.type8{
+    display: block;
+}
+
+.reservation_validation {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border: solid 2px rgba(0, 0, 0, 0.44);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.reservation_validation_header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.reservation_validation_row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.reservation_validation_row p {
+    margin: 0;
+    width: 50%;
+    font-size: 16px;
+}
+
+.reservation_validation_row p:first-child {
+    font-weight: bolder;
+}

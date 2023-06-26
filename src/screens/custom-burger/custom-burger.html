@@ -3,27 +3,31 @@
 <head>
     <link href="custom-burger-styles.css" rel="stylesheet">
     <script src="custom-burger.js"></script>
+    <link rel="stylesheet" href="../../style.css"/>
     <meta charset="utf-8">
     <title>Кастомный бургер</title>
 </head>
-
 <body>
-<div class="topnav">
-    <img alt="open nav" id="openNav" src="../../images/ic_open_nav.svg">
-    <button id="bookBtn">забронировать</button>
-</div>
-
-<div class="sidenav">
-    <img alt="close nav" id="closeNav" src="../../images/ic_close_nav.svg">
-    <a href="../home.html">НА ГЛАВНУЮ</a>
-    <a href="../menu_2.html">МЕНЮ</a>
-    <a href="../about_us/about_us.html">О НАС</a>
-    <a href="../about_us/about_us_2.html">О НАС 2</a>
-    <a href="../events.html">МЕРОПРИЯТИЯ</a>
-    <a href="../booking.html">ЗАБРОНИРОВАТЬ</a>
-    <a href="../contacts/contacts.html">КОНТАКТЫ</a>
-    <a href="../contacts/contacts_2.html">КОНТАКТЫ 2</a>
-</div>
+<!-- header start -->
+<header class="main_header">
+    <div class="topnav">
+        <img id="openNav" src="../../images/ic_open_nav.svg" alt="Three horizontal lines to open navigation menu">
+        <a href="../../index.html" class="header_logo">
+            <img src="../../images/restaraunt_logo.svg" alt="logo looks like glued capital letters A and B">
+        </a>
+    </div>
+    <div class="sidenav">
+        <img id="closeNav" src="../../images/ic_close_nav.svg" alt="Cross ti close navigation menu">
+        <a href="../../index.html">НА ГЛАВНУЮ</a>
+        <a href="../../screens/menu/menu.html">МЕНЮ</a>
+        <a href="../../screens/custom-burger/custom-burger.html">СОБРАТЬ БУРГЕР</a>
+        <a href="../../screens/events/events.html">МЕРОПРИЯТИЯ</a>
+        <a href="#" id="reservation_link">ЗАБРОНИРОВАТЬ</a>
+        <a href="../../screens/contacts/contacts.html">КОНТАКТЫ</a>
+    </div>
+</header>
+<!-- header end -->
+<script src="../../script.js"></script>
 <div class="container">
     <h1>СОБЕРИТЕ БУРГЕР</h1>
     <div class="components">

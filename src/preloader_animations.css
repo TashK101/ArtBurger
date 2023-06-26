@@ -17,10 +17,10 @@ body {
 }
 
 .back {
-    background-image: url(../../images/preloader/preloader_back.jpg);
+    background-image: url(images/preloader/preloader_back.jpg);
     background-size: cover;
     position: fixed;
-    
+
     height: 100vh;
     width: 100vw;
     animation: fade_out_anim 0.95s linear forwards;
@@ -49,7 +49,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-} 
+}
 
 .word_wrapper_art,
 .word_wrapper_burger {
@@ -63,7 +63,7 @@ body {
     justify-content: right;
     height: var(--preloader__height);
     right: 100%;
-    animation: art_wrapper_anim 4s linear forwards; 
+    animation: art_wrapper_anim 4s linear forwards;
 }
 
 .word_wrapper_burger {

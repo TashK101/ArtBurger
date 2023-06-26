@@ -7,11 +7,11 @@ const reservationClose = document.querySelector(".reservation_closeNav");
 const preloaderScene = document.querySelector('.preloader_scene');
 const reservationLink = document.querySelector('#reservation_link');
 
-sidenavOpen.addEventListener("click", () => sidenav.style.width = "513px");
-sidenavClose.addEventListener("click", () => sidenav.style.width = "0px");
+sidenavOpen.addEventListener("click", () => sidenav.style.transform = "translateX(0)");
+sidenavClose.addEventListener("click", () => sidenav.style.transform = "translateX(-100%)");
 
-reservationOpen.addEventListener("click", () => reservation.style.width = "60%");
-reservationLink.addEventListener("click", () => reservation.style.width = "60%");
-reservationClose.addEventListener("click", () => reservation.style.width = "0");
+reservationOpen.addEventListener("click", () => reservation.style.transform = "translateX(0)");
+reservationLink.addEventListener("click", () => reservation.style.transform = "translateX(0)");
+reservationClose.addEventListener("click", () => reservation.style.transform = "translateX(100%)");
 
 setTimeout(() => preloaderScene.style.display = 'none', 5000);
